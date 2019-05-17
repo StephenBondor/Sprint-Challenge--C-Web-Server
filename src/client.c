@@ -83,9 +83,10 @@ int main(int argc, char *argv[])
 	
 	while ((numbytes = recv(sockfd, buf, BUFSIZE - 1, 0)) > 0) 
 	{
-		  printf("%s", buf);
+		  printf("%s\n\n -- still more junk -- \n\n", buf);
 	}
 
 	free(url_info);
+	close(sockfd);
   	return 0;
 }
